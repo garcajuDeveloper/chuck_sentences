@@ -2,12 +2,18 @@ import React from 'react';
 import  { 
           MainContainer,
           Button 
-        } from './app_styled_components/appStyledComponents'
+        } from './app_styled_components/appStyledComponents';
+
+import  { getQuote } from './utils/apiResolver';
 
 function App() {
   return (
     <MainContainer>
-      <Button>Talk me</Button>
+      <Button
+        onClick = { () => getQuote()}
+      >
+        Talk me
+      </Button>
     </MainContainer>
   );
 }
