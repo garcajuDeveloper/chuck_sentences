@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState} from 'react';
 import  { 
           MainContainer,
           Button 
@@ -7,10 +7,12 @@ import  {
 import  { getQuote } from './utils/apiResolver';
 
 function App() {
+  const [chuckQuote, saveChuckQuote] = useState({});
+  
   return (
     <MainContainer>
       <Button
-        onClick = { () => getQuote()}
+        onClick = { () => getQuote(saveChuckQuote)}
       >
         Talk me
       </Button>
