@@ -1,8 +1,14 @@
 import React from 'react';
+import  { 
+          MainContainer,
+          Button 
+        } from './app_styled_components/appStyledComponents'
 
 function App() {
   return (
-    <h1>Chuck Norris</h1>
+    <MainContainer>
+      <Button>Talk me</Button>
+    </MainContainer>
   );
 }
 
