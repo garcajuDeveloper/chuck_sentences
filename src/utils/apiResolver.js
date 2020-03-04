@@ -2,8 +2,7 @@ import  {
             API_URL
         } from '../resources/String';
 
-export const getQuote = async () => {
-    const apiCall = await fetch(API_URL);
-    const quoteResult = await apiCall.json();
-    console.log(quoteResult.value); 
+export const getQuote = async () => { 
+    const resultQuote = await (await fetch(API_URL)).json();
+    console.log(resultQuote.value);
 }
